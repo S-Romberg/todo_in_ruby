@@ -10,6 +10,8 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
+    puts "hey #{params[:id]}"
+    @user = User.find(params[:id])
   end
 
   # GET /users/new
@@ -69,6 +71,6 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:username, :email, :password)
+      params.require(:user).permit(:username, :email, :password, :tasks)
     end
 end

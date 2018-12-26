@@ -18,9 +18,9 @@ ActiveRecord::Schema.define(version: 2018_12_26_215758) do
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "users_id"
+    t.integer "user_id"
     t.boolean "completed"
-    t.index ["users_id"], name: "index_tasks_on_users_id"
+    t.index ["user_id"], name: "index_tasks_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
