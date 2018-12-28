@@ -16,11 +16,20 @@
 </p>
 
 <p>
-  <strong>Tasks:</strong>
-  <%= @user.tasks.each do |task| %>
-    <%= task.task %> 
-    <%= task.type_of_task %>  
-    <%= task.description %>  
+  <strong>Profile Picture:</strong>
+  <%= @user.profile_picture %>
+</p>
+
+<p>
+  <% @user.tasks.each do |task| %>
+    <h4>Task: </h4>
+    <%= task.task %> </br>
+    <h4>Type: </h4>
+    <%= task.type_of_task %>  </br>
+    <h4>Status: </h4>
+    <%= task.completed ? "Completed" : "Not Completed" %>
+    <h4>Description: </h4>
+    <%= task.description %>  <br/>
   <% end %>
 </p>
 
