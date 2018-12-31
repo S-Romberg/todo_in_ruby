@@ -5,26 +5,38 @@
 
   <div class="users">
     <% @users.each do |user| %>
-        <h4>Username</h4>
-        <td><%= user.username %></td>
-        <h4>Email</h4>
-        <td><%= user.email %></td>
-        <h4>Password</h4>
-        <td><%= user.password %></td> <br/>
-        <tr><% user.tasks.each do |task| %>
+    <div class='user-container'>
+      <div class="user">
+        <div>
+          <h4>Username</h4>
+          <p><%= user.username %></p>
+        </div>
+        <div>
+          <h4>Email</h4>
+          <p><%= user.email %></p>
+        </div>
+        <div>
+          <h4>Password</h4>
+          <p><%= user.password %></p> <br/>
+        </div>
+        <div class="tasks"><% user.tasks.each do |task| %>
           <strong>Task: </strong>
-            <td> <%= task.task %> </td>
+            <p> <%= task.task %> </p>
             <strong>Type: </strong>
-            <td> <%= task.type_of_task %> </td> 
+            <p> <%= task.type_of_task %> </p> 
             <strong>Status: </strong>
-            <td> <%= task.completed ? "Completed" : "Not Completed" %></td>
+            <p> <%= task.completed ? "Completed" : "Not Completed" %></p>
             <strong>Description: </strong>
-            <td> <%= task.description %> </td> 
-          <% end %></tr>
-        <a><%= link_to 'Show', user %></a>
-        <a><%= link_to 'Tasks' %></a>
-        <a><%= link_to 'Edit', edit_user_path(user) %></a>
-        <a><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></a>
+            <p> <%= task.description %> </p> 
+          <% end %></div>
+        </div>
+        <div class="links">
+          <%= link_to 'Show', user %>
+          <%= link_to 'Tasks' %>
+          <%= link_to 'Edit', edit_user_path(user) %>
+          <%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </div>
+      </div>
     <% end %>
   </div>
 
