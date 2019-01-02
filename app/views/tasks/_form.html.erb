@@ -10,33 +10,35 @@
       </ul>
     </div>
   <% end %>
+  <div class="form">
 
-  <div class="field">
-    <%= form.label :task %>
-    <%= form.text_field :task %>
-  </div>
+    <div class="field">
+      <%= form.label :task %>
+      <%= form.text_field :task %>
+    </div>
 
-  <div class="field">
-    <%= form.label :type_of_task %>
-    <%= form.text_field :type_of_task %>
-  </div>
+    <div class="field">
+      <%= form.label :type_of_task %>
+      <%= form.text_field :type_of_task %>
+    </div>
 
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description %>
-  </div>
+    <div class="field">
+      <%= form.label :description %>
+      <%= form.text_area :description %>
+    </div>
 
-  <div class="field">
-    <%= form.label :completed %>
-    <%= form.check_box :completed %>
-  </div>
+    <div class="field">
+      <%= form.label :completed %>
+      <%= form.check_box :completed %>
+    </div>
 
-  <div class="field">
-    <%= form.label :user_id %>
-    <%= form.number_field :user_id %>
-  </div>
+    <div class="field">
+      <%= form.label :user_id %>
+      <%= form.number_field :user_id %>
+    </div>
 
-  <div class="actions">
-    <%= form.submit %>
+    <div class="actions">
+      <%= form.submit %>
+    </div>
   </div>
 <% end %>

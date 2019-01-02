@@ -2,7 +2,7 @@
 
 <h1>Users</h1>
 
-
+<div class="new_user"><%=  link_to 'New User', new_user_path %></div>
   <div class="users">
     <% @users.each do |user| %>
     <div class='user-container'>
@@ -14,10 +14,6 @@
         <div>
           <h4>Email</h4>
           <p><%= user.email %></p>
-        </div>
-        <div>
-          <h4>Password</h4>
-          <p><%= user.password %></p> <br/>
         </div>
         <div class="tasks"><% user.tasks.each do |task| %>
           <strong>Task: </strong>
@@ -42,4 +38,4 @@
 
 <br>
 
-<%= link_to 'New User', new_user_path %>
+
