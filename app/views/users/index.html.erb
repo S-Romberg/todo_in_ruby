@@ -4,6 +4,7 @@
 
 <div class="new_user"><%=  link_to 'New User', new_user_path %></div>
   <div class="users">
+  <%= image_tag 'image.png', width: '100px' %>
     <% @users.each do |user| %>
     <div class='user-container'>
       <div class="user">
