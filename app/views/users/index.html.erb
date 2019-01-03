@@ -10,7 +10,7 @@
       <div class="user">
         <div class="profile">
           <div>
-            <%= image_tag user.profile_picture.attached? ? user.profile_picture : 'image.png', width: '30%' %>
+            <%= image_tag user.profile_picture.attached? ? user.profile_picture : 'image.png', class: 'image' %>
           </div>
           <div>
             <h4>Username</h4>
@@ -33,10 +33,9 @@
           <% end %></div>
         </div>
         <div class="links">
-          <%= link_to 'Show', user %>
-          <%= link_to 'Tasks' %>
+          <%= link_to 'More', user %>
           <%= link_to 'Edit', edit_user_path(user) %>
-          <%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <%= link_to 'Delete', user, method: :delete, data: { confirm: 'Are you sure?' } %>
         </div>
       </div>
     <% end %>

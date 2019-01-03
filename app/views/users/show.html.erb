@@ -1,32 +1,33 @@
 <p id="notice"><%= notice %></p>
+<div class="userShow">
+  <div class="single profileTag">
+    <div>
+      <%= image_tag @user.profile_picture.attached? ? @user.profile_picture : 'image.png', class: "image"%>
+    </div>
+    <div>
+      <strong><%= @user.username %></strong>
+    </div>
+    <div>
+      <%= @user.email %>
+    </div>
+    <%= link_to 'Edit', edit_user_path(@user) %> 
+    <%= link_to 'Back', users_path %>
+  </div>
 
-<p>
-  <strong>Username:</strong>
-  <%= @user.username %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
-<p>
-  <strong>Profile Picture:</strong>
-  <%= image_tag @user.profile_picture  %>
-</p>
-
-<p>
-  <% @user.tasks.each do |task| %>
-    <h4>Task: </h4>
-    <%= task.task %> </br>
-    <h4>Type: </h4>
-    <%= task.type_of_task %>  </br>
-    <h4>Status: </h4>
-    <%= task.completed ? "Completed" : "Not Completed" %>
-    <h4>Description: </h4>
-    <%= task.description %>  <br/>
-  <% end %>
-</p>
+  <div>
+    <% @user.tasks.each do |task| %>
+      <div class="single">
+        <h4>Task: </h4>
+        <%= task.task %> </br>
+        <h4>Type: </h4>
+        <%= task.type_of_task %>  </br>
+        <h4>Status: </h4>
+        <%= task.completed ? "Completed" : "Not Completed" %>
+        <h4>Description: </h4>
+        <%= task.description %>  
+      </div>
+    <% end %>
+  </div>
+</div>
 
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>

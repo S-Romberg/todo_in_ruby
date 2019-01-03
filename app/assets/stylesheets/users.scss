@@ -10,7 +10,7 @@ body{
     display: flex;
     align-items:center;
     flex-direction: column;
-    background-color: rgb(243, 243, 243)
+    background-color: rgb(236, 236, 236)
 }
 a {  
     text-decoration: none;
@@ -28,55 +28,83 @@ a {
     background-color: grey;
     border-radius: 5px;
 }
-.users{
-    .user {
-        background-color: white;
-        margin-top: 3vh;
-        display:flex;
-        flex-direction: column;
-        align-items:center;
-        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-        border-top-left-radius:5px;
-        border-bottom-left-radius:5px;
-        height: 40vh;
-        width: 50vw;
-        overflow: scroll;
-        div {
-            width: 45vw;
-        }
-        .profile {
-            padding-top: 3vh;
-        }
-        .tasks {
-            font-size: 85%;
-            padding-left: 2vh;
-        }
-        
+
+.user {
+    background-color: white;
+    margin-top: 3vh;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-top-left-radius:5px;
+    border-bottom-left-radius:5px;
+    height: 40vh;
+    width: 50vw;
+    overflow: scroll;
+    div {
+        width: 45vw;
     }
-    .links {
-        margin-top: 3vh;
+    .profile {
+        padding-top: 3vh;
+    }
+    .tasks {
+        font-size: 85%;
+        padding-left: 2vh;
+    }
+    
+}
+.links {
+    margin-top: 3vh;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    align-items: center;
+    border-top-right-radius:5px;
+    border-bottom-right-radius:5px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    height: 40vh;
+    width: 10vw;
+    a {
         display: flex;
-        flex-direction: column;
-        background-color: black;
+        justify-content: center;
         align-items: center;
-        border-top-right-radius:5px;
-        border-bottom-right-radius:5px;
-        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-        height: 40vh;
-        width: 10vw;
-        a {
-           display: flex;
-           justify-content: center;
-           align-items: center;
-           color: white;
-           height: 10vh;
-           width: 10vw; 
+        color: white;
+        height: 33.3%;
+        width: 10vw; 
+    }
+    a:hover {
+        background-color: grey;
+    }
+}
+.userShow {
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    
+    .single {
+       box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+       border-top-left-radius:5px;
+       border-bottom-left-radius:5px;
+       padding: 2vh;
+       width: 40vw;
+    }
+    .profileTag {
+        height: 100%;
+        width: auto;
+        div {
+            margin-bottom: 1vh;
         }
-        a:hover {
-            height: 10vh;
+        a {
             background-color: grey;
+            padding: 0 3vw 0 3vw;
+            border-radius: 3px;
         }
     }
+}
+
+.image {
+    height: 20vh;
+    width: 20vh;
 }
 .user-container {
     display: flex;
