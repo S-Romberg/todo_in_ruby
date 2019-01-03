@@ -10,9 +10,13 @@
     <div>
       <%= @user.email %>
     </div>
-    <%= link_to 'Edit', edit_user_path(@user) %> 
-    <%= link_to 'Back', users_path %>
+    <div class="profileTagLinks">
+      <%= link_to 'Edit', edit_user_path(@user) %> 
+      <%= link_to 'Back', users_path %> 
+      <a href="/tasks/new">New Task</a>
+    </div>
   </div>
+  
 
   <div>
     <% @user.tasks.each do |task| %>
@@ -27,6 +31,7 @@
         <%= task.description %>  
       </div>
     <% end %>
+    
   </div>
 </div>
 
