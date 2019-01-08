@@ -2,34 +2,27 @@
 
 <h1>Tasks</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Task</th>
-      <th>Type of task</th>
-      <th>Description</th>
-      <th>User</th>
-      <th>Completed</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
+  <div class="tasks">
+    <%= link_to 'New Task', new_task_path %>
     <% @tasks.each do |task| %>
-      <tr>
-        <td><%= task.task %></td>
-        <td><%= task.type_of_task %></td>
-        <td><%= task.description %></td>
-         <td><%= task.user_id %></td>
-          <td><%= task.completed %></td>
-        <td><%= link_to 'Show', task %></td>
-        <td><%= link_to 'Edit', edit_task_path(task) %></td>
-        <td><%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <div class="single">
+        <h4>Task: </h4>
+        <%= task.task %> </br>
+        <h4>Type: </h4>
+        <%= task.type_of_task %>  </br>
+        <h4>Status: </h4>
+        <%= task.completed ? "Completed" : "Not Completed" %>
+        <h4>Description: </h4>
+        <%= task.description %> 
+        <nav>
+          <%= link_to 'Show', task %>
+          <%= link_to 'Edit', edit_task_path(task) %>
+          <%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </nav>
+      </div>
     <% end %>
-  </tbody>
-</table>
+  </div>
 
 <br>
 
-<%= link_to 'New Task', new_task_path %>
+

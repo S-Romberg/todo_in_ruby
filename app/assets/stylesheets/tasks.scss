@@ -9,7 +9,35 @@ $raleway: 'Raleway', sans-serif;
 }
 a {  
     text-decoration: none;
-  }
-  :visited {
     color: black;
-  }
+}
+
+.tasks {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+
+}
+.single {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-top-left-radius:5px;
+    border-bottom-left-radius:5px;
+    padding: 2vh;
+    width: 40vw;
+    background-color: white;
+    margin-top: 3vh;
+    nav {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 2vh;
+    }
+}
+a {
+    display: flex;
+    justify-content: center;
+    margin-top: 1vh;
+    width: 30%;
+    padding: 1vh 0 1vh 0;
+    background-color: grey;
+    border-radius: 3px;
+}

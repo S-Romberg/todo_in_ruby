@@ -25,6 +25,25 @@ a {
     justify-content: center;
     align-items: center;
   }
+  
+  input {
+    margin-top: 2vh;
+    border-radius: 2px;
+    border: thin solid grey;
+    width: 25vw;
+  }
+  .profile-pic {
+    input {
+      border: none;
+    }
+  }
+  .actions {
+    input {
+      height: 3vh;
+      background-color: grey;
+      width: 20vw;
+    }
+  }
 }
 
 #notice {
@@ -62,4 +81,12 @@ a {
 
 label {
   display: block;
+}
+
+.form {
+  width: 30vw;
+  height: 60vh;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border-radius: 5px;
 }
