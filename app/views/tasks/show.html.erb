@@ -1,31 +1,19 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Task:</strong>
-  <%= @task.task %>
-</p>
-
-<p>
-  <strong>Type of task:</strong>
-  <%= @task.type_of_task %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @task.user ? @task.user.username :  "User not found" %>
-</p>
-
-<p>
-  <strong>Completed:</strong>
-  <%= @task.completed %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @task.description %>
-</p>
-
-
-
-<%= link_to 'Edit', edit_task_path(@task) %> |
-<%= link_to 'Back', tasks_path %>
+  <div class="taskShow">
+      <div class="single">
+        <h4>Task: </h4>
+        <%= @task.task %> </br>
+        <h4>Type: </h4>
+        <%= @task.type_of_task %>  </br>
+        <h4>Status: </h4>
+        <%= @task.completed ? "Completed" : "Not Completed" %>
+        <h4>Description: </h4>
+        <%= @task.description %>
+        <h4>User:</h4> 
+        <%= @task.user ? @task.user.username :  "User not found" %>
+        <nav>
+          <%= link_to 'Edit', edit_task_path(@task) %>
+        </nav>
+      </div>
+  </div>
