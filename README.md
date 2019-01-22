@@ -5,6 +5,6 @@ This is a simple to do list app that I built using Ruby on Rails. I created a on
 * Ruby version 2.5.3
 * PostgreSQL
 * Ruby on Rails
-
+![](todo-rails.gif)
 
 [Deployed site](https://s3-rails-todo.herokuapp.com/)
