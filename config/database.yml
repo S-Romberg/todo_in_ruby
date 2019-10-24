@@ -69,8 +69,9 @@ test:
 #
 production:
   <<: *default
-  database: s3-rails-todos_production
-  username: myapp
-  password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>
-
+  database: rails-todo-db_production
+  username: postgres
+  password: <%= ENV['HELLO_WORLD_DATABASE_PASSWORD'] %>
+  host: <%= ENV['HELLO_WORLD_DATABASE_HOST'] %>
+  port: <%= ENV['HELLO_WORLD_DATABASE_PORT'] %>
 

@@ -4,8 +4,17 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.5.3'
 gem "aws-sdk-s3", require: false
 
+group :development do
+  gem "capistrano", "~> 3.10", require: false
+  gem "capistrano-rails", "~> 1.3", require: false
+end
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+gem 'figaro'
+gem 'capistrano-bundler'
+gem 'capistrano-passenger', '>= 0.1.1'
+gem 'capistrano-rvm'
 gem 'rails', '~> 5.2.2'
+gem 'capistrano-figaro-yml', '~> 1.0.2'
 # Use sqlite3 as the database for Active Record
 # gem 'sqlite3'
 gem "pg"
